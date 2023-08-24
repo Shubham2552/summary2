@@ -1,0 +1,77 @@
+/* Styling for the popup */
+
+/* Basic styling for the popup body */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 600px;
+  color: white;
+  background-color: #333; /* Dark background color */
+}
+
+/* Remove top margin from level 2 headings */
+h2 {
+  margin-top: 0;
+}
+
+/* Add margin to level 3 headings */
+h3 {
+  margin-top: 20px;
+}
+
+/* Styling for the summary points container */
+#point {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 1.5;
+  font-size: 16px;
+  max-height: 200px; /* Adjust max-height as needed */
+  overflow-y: auto;
+}
+
+/* Styling for the summary points list */
+#point ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Styling for individual summary points */
+#point li {
+  margin-left: 20px; /* Adjust the indentation as needed */
+  padding-left: 20px; /* Adjust the padding as needed */
+  position: relative;
+}
+
+/* Adding bullet points before each summary point */
+#point li::before {
+  content: '\2022'; /* Bullet point character */
+  position: absolute;
+  left: 0;
+}
+
+/* Styling for the copy button */
+#copyButton {
+  display: block;
+  margin-top: 15px;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Highlighting button on hover */
+#copyButton:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Removing default list bullets from list items */
+li {
+  list-style: none;
+}

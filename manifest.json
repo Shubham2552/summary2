@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Summary Mode",
+  "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "version": "1.0",
+
+  "icons": {
+    "16": "images/summary2.png",
+    "32": "images/summary2.png",
+    "48": "images/summary2.png",
+    "128": "images/summary2.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/summary2.png",
+      "32": "images/summary2.png",
+      "48": "images/summary2.png",
+      "128": "images/summary2.png"
+    }
+  },
+  "permissions": ["scripting", "activeTab","storage"],
+  "host_permissions": ["https://api.meaningcloud.com/summarization-1.0"],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html"],
+      "matches": ["<all_urls>"]
+    }],
+  
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  }
+}
